@@ -5,12 +5,10 @@ import java.util.Random;
 public class Dice {
     // roll the die and return the value (1-6)
     public int roll() {
-        Random r = new Random();
-        int Low = 1;
-        int High = 7;
-        // Rolls random number between 0 and 7
-        int Result = r.nextInt(6) + 1;
-        return Result;
+        Random random = new Random();
+        // Rolls random number between 0(inclusive) and 6(exclusive)
+        int Result = random.nextInt(6);
+        return Result+1;
     }
     // roll the die n times and print the values
     public void rollMultiple(int n) {
